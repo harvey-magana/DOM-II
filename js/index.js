@@ -15,6 +15,7 @@ let inverseContent = document.querySelector('.inverse-content');
 let inverseText = document.querySelector('.inverse-section .text-content');
 let inverseImg= document.querySelector('.inverse-section .img-content');
 
+let bottomImg = document.querySelector('.content-destination img');
 let destinations = document.querySelectorAll('.destination');
 
 window.addEventListener('load', () => {
@@ -46,21 +47,25 @@ window.addEventListener('scroll', function() {
 });
 
 (function() {
-  
     var taskItems = document.querySelectorAll(".nav");
   
     for ( var i = 0, len = taskItems.length; i < len; i++ ) {
       var taskItem = taskItems[i];
       contextMenuListener(taskItem);
     }
-  
     function contextMenuListener(el) {
       el.addEventListener( "contextmenu", function(e) {
         console.log(e, el);
       });
     }
-  
   })();
 
+destinations[1].lastElementChild.addEventListener('click', () => {
+    destinations[1].lastElementChild.textContent = 'Nevermind...';
+});
 
-  
+bottomImg.addEventListener('dblclick', () => {
+    if (event.type === 'dblclick') {
+        bottomImg.style.transform = "scaleX(-1)"; 
+    } 
+})
