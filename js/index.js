@@ -25,6 +25,14 @@ window.addEventListener('load', () => {
     }
 })
 
+document.addEventListener('keydown', () => {
+    headerP.style.color = "yellow";
+});
+
+document.addEventListener('keyup', () => {
+    headerP.style.color = "";
+});
+
 heroImg.addEventListener('mouseover', () => {
     heroImg.style.border = "3px solid pink";
 })
