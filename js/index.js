@@ -15,5 +15,26 @@ let inverseContent = document.querySelector('.inverse-section');
 let inverseText = document.querySelector('.inverse-section .text-content');
 let inverseImg= document.querySelector('.inverse-section .img-content');
 
+let destinations = document.querySelectorAll('.destination');
+
+window.addEventListener('load', () => {
+    if(event.target === 'load') {
+        headerLogo.style.color = "yellow";
+    } else {
+        headerLogo.style.color = "green";
+    }
+})
+
+heroImg.addEventListener('mouseover', () => {
+    heroImg.style.border = "3px solid pink";
+})
+
+heroImg.addEventListener('mouseout', () => {
+    heroImg.style.border = "";
+})
+
+
+
+
 
   
