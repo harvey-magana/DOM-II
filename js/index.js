@@ -11,7 +11,7 @@ let contentSection = document.querySelector('.content-section');
 let contentText = document.querySelector('.content-section .text-content');
 let contentImg = document.querySelector('.content-section .img-content');
 
-let inverseContent = document.querySelector('.inverse-section');
+let inverseContent = document.querySelector('.inverse-content');
 let inverseText = document.querySelector('.inverse-section .text-content');
 let inverseImg= document.querySelector('.inverse-section .img-content');
 
@@ -41,6 +41,9 @@ heroImg.addEventListener('mouseout', () => {
     heroImg.style.border = "";
 })
 
+window.addEventListener('scroll', function() {
+    inverseContent.lastElementChild.firstElementChild.textContent = window.pageXOffset + 'px';
+});
 
 
 
